@@ -3,7 +3,20 @@ Debemos lograr tomar un dato por 'ID'
 y luego mostrarlo por 'Alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
-	let nombre; 
+	//declarar variable
+	var nombre;
+
+	//entrada de datos
+	nombre = document.getElementById("txtIdNombre").value;
+
+	//salida de datos
+
+	alert(nombre);	
+	
+	
+}	
+	
+	/*let nombre; 
 	nombre = document.getElementById("txtIdNombre").value;
 	
 	 alert (nombre);
@@ -12,12 +25,11 @@ function mostrar()
 
 	 /*primero se pide espacio mediante let,  
 	 la funcion getelementbyid trae el documento por id. el documento es el html.hay que indicar que documento
-	   traer, y asignar a la variable nombre. poner punto y value para que traiga el valor. 
-	 y luego se muestra con alert
+	   traer, y asignar a la variable nombre. poner punto y value para que traiga el valor. y luego se muestra con alert
 	 en document. no hay que dejar espacios*/
 
 
 
-}
+
 
 

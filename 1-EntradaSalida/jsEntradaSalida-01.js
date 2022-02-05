@@ -1,3 +1,34 @@
+/* ejercicio rompecocos - sabados
+La juguetería El MUNDO DE OCTAVIO nos encarga un programa para conocer qué cantidad 
+de materiales se necesita para la fabricación de distintos juguetes 
+AB = Diámetro mayor
+DC = diámetro menor
+BD y BC = lados menores
+AD y AC = lados mayores
+
+Todos los datos se ingresan por prompt. Pueden usar el mismo html del ejercicio 01 de E/S
+
+Debemos tener en cuenta que la estructura del cometa estará dada por un perímetro de varillas de plástico y los correspondientes entrecruces (DC y AB) del mismo material para mantener la forma del cometa.
+El cometa estará construido con papel de alta resistencia. La cola del mismo se construirá con el mismo papel que el cuerpo y representará un 10% adicional del necesario para el cuerpo.
+Necesitamos saber cuántos Mts de varillas de plástico y cuántos de papel son necesarios para la construcción en masa de 10 cometas. Tener en cuenta que los valores de entrada están expresados en Cms.
+Ahora necesitamos saber cuánto papel de cada color necesitamos. Las entradas son las mismas.
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 Al presionar el  botón, 
 se debe mostrar un mensaje como el siguiente "Esto funciona de maravilla"*/
@@ -11,6 +42,9 @@ y el precio final total más iva(21%), pedir un porcentaje de descuento y aplica
 , mostrar todos los datos calculados e ingresados ​​por alerta. (solo una alerta en el código). 
 Los datos se piden por prompt.
 */
+
+/* ejercicio clase sabado 5/2:
+
 function mostrar () 
 {
 	//definicion de variables
@@ -67,80 +101,16 @@ function mostrar ()
 	//salida de datos
     
 	mensaje = "Los productos con sus precios son: ";
-	mensaje = mensaje + nombrePrimerProducto + " $"+ precioPrimerProducto + ", ";
-	mensaje = mensaje + nombreSegundoProducto + " $" + precioSegundoProducto + ", ";
-	mensaje = mensaje + nombreTercerProducto + " $" + precioTercerProducto + ", ";
-    mensaje = mensaje + "el precio bruto totl es $" + precioBruto + ", ";
-	mensaje = mensaje + "el promedio es $" + promedioDePrecios + ", ";
-	mensaje = mensaje + "el precio final es $" + precioFinal + "; ";
-	mensaje = mensaje + "el precio final con el " + porcentajeDeDescuento + "% de descuento es $" + + precioFinalConDescuento + ".";
+	mensaje = mensaje + nombrePrimerProducto + " $"+ precioPrimerProducto.toFixed(2) + ", ";
+	mensaje = mensaje + nombreSegundoProducto + " $" + precioSegundoProducto.toFixed(2) + ", ";
+	mensaje = mensaje + nombreTercerProducto + " $" + precioTercerProducto.toFixed(2) + ", ";
+    mensaje = mensaje + "el precio bruto totl es $" + precioBruto.toFixed(2) + ", ";
+	mensaje = mensaje + "el promedio es $" + promedioDePrecios.toFixed(2) + ", ";
+	mensaje = mensaje + "el precio final es $" + precioFinal.toFixed(2)+ "; ";
+	mensaje = mensaje + "el precio final con el " + porcentajeDeDescuento + "% de descuento es $" + + precioFinalConDescuento.toFixed(2) + ".";
 
 	alert(mensaje);
 
 }
-
-
-
-/*
-function mostrar() {
-
-	let nombrePrimerProducto;
-	let nombreSegundoProducto;
-	let nombreTercerProducto;
-	let precioPrimerProducto;
-	let precioSegundoProducto;
-	let precioTercerProducto;
-	let precioBruto;
-	let promedioDePrecios;
-	let precioFinalIva;
-	let iva;
-	let ivaCalculado;
-	let porcentajeDeDescuento;
-	let descuentoCalculado;
-	let precioFinalIvaConDescuento;
-	let mensaje;
-
-	iva = 21;
-	nombrePrimerProducto = prompt("Ingrese el nombre del Primer Producto");
-	precioPrimerProducto = prompt("Ingrese el Precio de "+nombrePrimerProducto);
-	precioPrimerProducto = parseInt(precioPrimerProducto);
-	
-	nombreSegundoProducto = prompt("Ingrese el nombre del Segundo Producto");
-	precioSegundoProducto = prompt("Ingrese el Precio de "+nombreSegundoProducto);
-	precioSegundoProducto = parseInt(precioSegundoProducto);
-
-	nombreTercerProducto = prompt("Ingrese el nombre del Tercer Producto");
-	precioTercerProducto = prompt("Ingrese el Precio de "+nombreTercerProducto);
-	precioTercerProducto = parseInt(precioTercerProducto);
-
-	porcentajeDeDescuento = prompt("Indique el % de Descuento que desea aplicar al precio");
-	porcentajeDeDescuento = parseInt(porcentajeDeDescuento);//dato que ingresa el usuario y lo usamos para operar
-
-	precioBruto = precioPrimerProducto + precioSegundoProducto + precioTercerProducto;
-
-	promedioDePrecios = precioBruto / 3;
-
-	ivaCalculado = (precioBruto/100)*iva;
-
-	precioFinalIva = precioBruto + ivaCalculado;
-
-	descuentoCalculado = (precioFinalIva/100)*porcentajeDeDescuento;
-
-	precioFinalIvaConDescuento = precioFinalIva - descuentoCalculado;
-
-	mensaje = "Los productos con su precio son: ";
-	mensaje = mensaje + nombrePrimerProducto+" $"+precioPrimerProducto+" ,";
-	mensaje = mensaje + nombreSegundoProducto+" $"+precioSegundoProducto+" ,";
-	mensaje = mensaje + nombreTercerProducto+" $"+precioTercerProducto+" ,";
-	mensaje = mensaje + "Precio Bruto: $"+precioBruto+" ,";
-	mensaje = mensaje + "Promedio: $"+promedioDePrecios+" ,";
-	mensaje = mensaje + "El Precio Más IVA: $"+precioFinalIva+" ,";
-	mensaje = mensaje + "El Precio Final con el"+porcentajeDeDescuento+"% de Descuento: "+precioFinalIvaConDescuento;
-
-	alert(mensaje);
-
-
-}
-
-
 */
+
