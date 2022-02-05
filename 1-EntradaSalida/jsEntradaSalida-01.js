@@ -13,61 +13,80 @@ Los datos se piden por prompt.
 */
 function mostrar () 
 {
-	var nombreUno;
-	var nombreDos;
-	var nombreTres;
-	var precioUno;
-	var precioDos;
-	var precioTres;
+	//definicion de variables
+	
+	var nombrePrimerProducto;
+	var nombreSegundoProducto;
+	var nombreTercerProducto;
+	var precioPrimerProducto;
+	var precioSegundoProducto;
+	var precioTercerProducto;
 	var precioBruto;
 	var promedioDePrecios;
-	var impuesto;
-	var iva
-	var ivaCalculado
-	var porcentajeDeDescuento;
+	var iva;
+	var ivaCalculado;
 	var precioFinal;
+	var porcentajeDeDescuento;
+	var descuentoCalculado;
 	var precioFinalConDescuento;
-	var descuento
-
-	nombreUno = prompt ("ingrese el nombre del primer producto");
-	precioUno = prompt ("ingrese el precio de " + nombreUno);
-	precioUno = parseFloat(precioUno);
-
-	nombreDos = prompt ("ingrese el nombre del primer producto");
-	precioDos = prompt ("ingrese el precio de " + nombreDos);
-	precioDos = parseFloat (precioDos);
-
-	nombreTres = prompt ("ingrese el nombre del primer producto");
-	precioDos = prompt ("ingrese el precio de " + nombreTres);
-	precioDos = parseFloat (precioTres);
-
-	descuento = prompt ("ingrese el descuento ")
-	descuento = parseFloat (descuento);
+	var mensaje;
 	
-	precioBruto = precioUno + precioDos + precioTres;
+	//entrada de datos
+
+	nombrePrimerProducto = prompt ("ingrese el nombre del primer producto");
+	precioPrimerProducto = prompt ("ingrese el precio de " + nombrePrimerProducto);
+	precioPrimerProducto = parseFloat(precioPrimerProducto);
+
+	nombreSegundoProducto = prompt ("ingrese el nombre del segundo producto");
+	precioSegundoProducto = prompt ("ingrese el precio de " + nombreSegundoProducto);
+	precioSegundoProducto = parseFloat (precioSegundoProducto);
+
+	nombreTercerProducto = prompt ("ingrese el nombre del tercer producto");
+	precioSegundoProducto = prompt ("ingrese el precio de " + nombreTercerProducto);
+	precioSegundoProducto = parseFloat (precioTercerProducto);
+
+	porcentajeDeDescuento = prompt ("ingrese el porcentaje de descuento ");
+	porcentajeDeDescuento = parseFloat (porcentajeDeDescuento);
+	
+	//operaciones
+
+	precioBruto = precioPrimerProducto + precioSegundoProducto + precioTercerProducto;
+
 	promedioDePrecios = precioBruto / 3;
 
 	iva = 21;
 
-	ivaCalculado = (precioBruto/100)*iva
+	ivaCalculado = (precioBruto/100)*iva;
 
-    precioFinal = precioBruto + ivaCalculado
+    precioFinal = precioBruto + ivaCalculado;
   	
-	descuento = (precioFinal / 100)* porcentajeDeDescuento;
-    precioFinalConDescuento = precioFinal - porcentajeDeDescuento;
+	descuentoCalculado = (precioFinal / 100)* porcentajeDeDescuento;
 
-	alert(
+    precioFinalConDescuento = precioFinal - descuentoCalculado;
+
+	//salida de datos
+    
+	mensaje = "Los productos con sus precios son: ";
+	mensaje = mensaje + nombrePrimerProducto + " $"+ precioPrimerProducto + ", ";
+	mensaje = mensaje + nombreSegundoProducto + " $" + precioSegundoProducto + ", ";
+	mensaje = mensaje + nombreTercerProducto + " $" + precioTercerProducto + ", ";
+    mensaje = mensaje + "el precio bruto totl es $" + precioBruto + ", ";
+	mensaje = mensaje + "el promedio es $" + promedioDePrecios + ", ";
+	mensaje = mensaje + "el precio final es $" + precioFinal + "; ";
+	mensaje = mensaje + "el precio final con el " + porcentajeDeDescuento + "% de descuento es $" + + precioFinalConDescuento + ".";
+
+	alert(mensaje)
 }
 
 /*
 function mostrar() {
 
-	let nombreUno;
-	let nombreDos;
-	let nombreTres;
-	let precioUno;
-	let precioDos;
-	let precioTres;
+	let nombrePrimerProducto;
+	let nombreSegundoProducto;
+	let nombreTercerProducto;
+	let precioPrimerProducto;
+	let precioSegundoProducto;
+	let precioTercerProducto;
 	let precioBruto;
 	let promedioDePrecios;
 	let precioFinalIva;
@@ -79,22 +98,22 @@ function mostrar() {
 	let mensaje;
 
 	iva = 21;
-	nombreUno = prompt("Ingrese el nombre del Primer Producto");
-	precioUno = prompt("Ingrese el Precio de "+nombreUno);
-	precioUno = parseInt(precioUno);
+	nombrePrimerProducto = prompt("Ingrese el nombre del Primer Producto");
+	precioPrimerProducto = prompt("Ingrese el Precio de "+nombrePrimerProducto);
+	precioPrimerProducto = parseInt(precioPrimerProducto);
 	
-	nombreDos = prompt("Ingrese el nombre del Segundo Producto");
-	precioDos = prompt("Ingrese el Precio de "+nombreDos);
-	precioDos = parseInt(precioDos);
+	nombreSegundoProducto = prompt("Ingrese el nombre del Segundo Producto");
+	precioSegundoProducto = prompt("Ingrese el Precio de "+nombreSegundoProducto);
+	precioSegundoProducto = parseInt(precioSegundoProducto);
 
-	nombreTres = prompt("Ingrese el nombre del Tercer Producto");
-	precioTres = prompt("Ingrese el Precio de "+nombreTres);
-	precioTres = parseInt(precioTres);
+	nombreTercerProducto = prompt("Ingrese el nombre del Tercer Producto");
+	precioTercerProducto = prompt("Ingrese el Precio de "+nombreTercerProducto);
+	precioTercerProducto = parseInt(precioTercerProducto);
 
 	porcentajeDeDescuento = prompt("Indique el % de Descuento que desea aplicar al precio");
 	porcentajeDeDescuento = parseInt(porcentajeDeDescuento);//dato que ingresa el usuario y lo usamos para operar
 
-	precioBruto = precioUno + precioDos + precioTres;
+	precioBruto = precioPrimerProducto + precioSegundoProducto + precioTercerProducto;
 
 	promedioDePrecios = precioBruto / 3;
 
@@ -107,9 +126,9 @@ function mostrar() {
 	precioFinalIvaConDescuento = precioFinalIva - descuentoCalculado;
 
 	mensaje = "Los productos con su precio son: ";
-	mensaje = mensaje + nombreUno+" $"+precioUno+" ,";
-	mensaje = mensaje + nombreDos+" $"+precioDos+" ,";
-	mensaje = mensaje + nombreTres+" $"+precioTres+" ,";
+	mensaje = mensaje + nombrePrimerProducto+" $"+precioPrimerProducto+" ,";
+	mensaje = mensaje + nombreSegundoProducto+" $"+precioSegundoProducto+" ,";
+	mensaje = mensaje + nombreTercerProducto+" $"+precioTercerProducto+" ,";
 	mensaje = mensaje + "Precio Bruto: $"+precioBruto+" ,";
 	mensaje = mensaje + "Promedio: $"+promedioDePrecios+" ,";
 	mensaje = mensaje + "El Precio Más IVA: $"+precioFinalIva+" ,";
