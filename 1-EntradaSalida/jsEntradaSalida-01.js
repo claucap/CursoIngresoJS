@@ -42,8 +42,10 @@ function mostrar ()
 	precioSegundoProducto = parseFloat (precioSegundoProducto);
 
 	nombreTercerProducto = prompt ("ingrese el nombre del tercer producto");
-	precioSegundoProducto = prompt ("ingrese el precio de " + nombreTercerProducto);
-	precioSegundoProducto = parseFloat (precioTercerProducto);
+	precioTercerProducto = prompt ("ingrese el precio de " + nombreTercerProducto);
+	precioTercerProducto = parseFloat (precioTercerProducto);
+
+	iva = 21
 
 	porcentajeDeDescuento = prompt ("ingrese el porcentaje de descuento ");
 	porcentajeDeDescuento = parseFloat (porcentajeDeDescuento);
@@ -54,13 +56,11 @@ function mostrar ()
 
 	promedioDePrecios = precioBruto / 3;
 
-	iva = 21;
+	ivaCalculado = (precioBruto/100) * iva;
 
-	ivaCalculado = (precioBruto/100)*iva;
+	precioFinal = precioBruto + ivaCalculado;
 
-    precioFinal = precioBruto + ivaCalculado;
-  	
-	descuentoCalculado = (precioFinal / 100)* porcentajeDeDescuento;
+	descuentoCalculado = (precioFinal/100) * porcentajeDeDescuento;
 
     precioFinalConDescuento = precioFinal - descuentoCalculado;
 
@@ -75,8 +75,11 @@ function mostrar ()
 	mensaje = mensaje + "el precio final es $" + precioFinal + "; ";
 	mensaje = mensaje + "el precio final con el " + porcentajeDeDescuento + "% de descuento es $" + + precioFinalConDescuento + ".";
 
-	alert(mensaje)
+	alert(mensaje);
+
 }
+
+
 
 /*
 function mostrar() {
