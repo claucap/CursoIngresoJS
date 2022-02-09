@@ -13,6 +13,25 @@ El cometa estará construido con papel de alta resistencia. La cola del mismo se
 Necesitamos saber cuántos Mts de varillas de plástico y cuántos de papel son necesarios para la construcción en masa de 10 cometas. Tener en cuenta que los valores de entrada están expresados en Cms.
 Ahora necesitamos saber cuánto papel de cada color necesitamos. Las entradas son las mismas.
 */
+function (mostrar);
+
+//definicion de variables
+
+var diametroMayorCm;
+var diametroMenorCm:
+var ladoMenorCm;
+var ladoMayorCm;
+var perimetroVarillasCm;
+var perimetroEntrecrucesCm;
+var cantidadTotalVarillasMt;
+var colaCm;
+var papelColor;
+var papelSinColor;
+var totalPapel;
+
+//entrada de datos
+
+
 
 
 
